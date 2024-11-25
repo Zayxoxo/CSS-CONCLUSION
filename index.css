@@ -898,7 +898,7 @@ footer img {
   }
 
   .pricing-item {
-    flex: 1 1 30%; /* Keep items at 30% width */
+    flex: 1 1 30%; 
     margin: 10px;
     box-sizing: border-box;
   }
