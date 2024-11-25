@@ -219,6 +219,15 @@ header {
 .pricing {
   text-align: center;
   margin: 3rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+.pricing-item {
+  flex: 1 1 30%; 
+  margin: 10px;
+  box-sizing: border-box;
 }
 .pricing h3 {
   font-size: 2rem;
@@ -594,8 +603,8 @@ footer {
   );
   color: black;
   display: flex;
-  flex-direction: row;
-  align-items: flex-start;
+  flex-direction: column;
+  align-items: center;
   gap: 2rem;
   padding: 1.5rem 1rem;
   margin-top: 0;
@@ -609,26 +618,20 @@ footer img {
   align-self: center;
   margin-top: -1rem;
 }
-
-.footer {
-  flex: 1;
+.footer-top,
+.footer-bottom {
   display: grid;
-  grid-template-rows: auto auto;
-  gap: 3rem;
+  gap: 2rem;
   width: 100%;
-  margin-left: 25rem;
+  padding: 0 1rem;
 }
 
 .footer-top {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
 }
 
 .footer-bottom {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
 }
 
 .footer-column {
@@ -658,6 +661,7 @@ footer img {
   cursor: pointer;
   transition: color 0.3s ease;
 }
+
 .container, .header-section, .hero-section, .footer {
   max-width: 100%;
   overflow: hidden; 
@@ -684,6 +688,14 @@ footer img {
   .payment-plan {
     flex-direction: column;
   }
+  .pricing {
+    flex-direction: column;
+    align-items: center;
+ }
+
+  .pricing-item {
+    width: 100%; 
+  }
 
   .basic, .professional, .teams {
     flex: 1 1 auto;
@@ -692,7 +704,35 @@ footer img {
     flex-direction: column; 
     padding: 2rem;
   }
+   .shortener-container, .custom-url-container, .qr-codes-container, .analytics-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
+
+.container-item {
+    flex: 1 1 45%; 
+    box-sizing: border-box;
+    margin: 10px;
+}
+   footer {
+    padding: 1.5rem 1rem; 
+  }
+
+  .footer-top, .footer-bottom {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-column h4 {
+    font-size: 1rem;
+  }
+
+  footer img {
+    width: 120px; 
+  }
+}
+
 
 @media (max-width: 480px) {
   .header-section {
@@ -726,6 +766,13 @@ footer img {
   width: 100%;
   box-sizing: border-box;
 }
+.pricing {
+  padding: 10px;
+}
+
+  .pricing-item {
+   width: 100%; 
+}
 
 .footer-top {
   display: grid;
@@ -734,12 +781,43 @@ footer img {
 }
 .hero-section img,
 .payment-plan img {
-  max-width: 100%;  /* Prevents images from overflowing their container */
+  max-width: 100%; 
   height: auto;
 }
+.container-item {
+  width: 100%; 
+  margin: 10px 0; 
+} 
+  footer {
+    padding: 1rem;
+  }
 
+  footer img {
+    width: 100px; 
+    margin-top: 0; 
+  }
 
-  
+  .footer-top, .footer-bottom {
+    grid-template-columns: 1fr; 
+    padding: 0 1rem;
+  }
+
+  .footer-column {
+    margin-bottom: 1rem;
+    text-align: center; 
+  }
+
+  .footer-column h4 {
+    font-size: 1rem;
+  }
+
+  .footer-column ul li {
+    font-size: 0.8rem; 
+  }
+
+  .footer-column ul li:hover {
+    color: #fff; 
+  }
 
 }
 
