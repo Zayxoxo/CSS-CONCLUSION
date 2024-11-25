@@ -676,6 +676,7 @@ footer img {
   max-width: 100%;
   overflow: hidden; 
 }
+
 /* Media Queries */
 @media (max-width: 768px) {
   .header-section {
@@ -885,4 +886,22 @@ footer img {
   }
 
 }
+/* Larger screen view (greater than 768px) for pricing section*/
+@media (min-width: 769px) {
+  .pricing {
+    text-align: center;
+    margin: 3rem 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+  }
+
+  .pricing-item {
+    flex: 1 1 30%; /* Keep items at 30% width */
+    margin: 10px;
+    box-sizing: border-box;
+  }
+}
+
 
