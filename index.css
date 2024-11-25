@@ -11,17 +11,19 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  padding: 1rem 2rem;
+  flex-wrap: wrap;
 }
 .header-section {
-  padding: 1rem 2rem;
   display: flex;
   align-items: center;
-  top: 12px;
-  left: 145.09px;
-  gap: 25rem;
-  font-size: 1.5rem;
-  margin-top: 2rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+.header-section p{
+  margin-left: auto;
+ 
 }
 .header-section a {
   text-decoration: none;
@@ -31,47 +33,33 @@ header {
   border-radius: 2rem;
   background-color: blue;
   color: white;
-  width: 150px;
-  height: 50px;
+  padding: 0.8rem 1.5rem;
   border: none;
   font-size: 1rem;
   cursor: pointer;
-  display: inline-block;
 }
 .header-section button:hover{
   background-color: rgb(240, 244, 255);
   color: rgb(182, 186, 238);
 }
 .hero-section {
-  width: Hug (948px) px;
-  height: Hug (389px) px;
-  top: 162px;
-  left: 246px;
-  gap: 32px;
-  opacity: 0px;
-  display: grid;
-  place-items: center;
+  text-align: center;
+  padding: 2rem;
 }
 .hero-section h1 {
-  width: 90rem;
-  height: 10rem;
-  margin-left: 10rem;
-  font-size: 4rem;
-  line-height: 6rem;
+  font-size: 2rem;
+  line-height: 2.5rem;
 }
+
 .hero-section h1 a {
   text-decoration: none;
   color: #005ae2;
 }
 
 .sub-paragraph {
-  font-size: 1.3rem;
-  line-height: 2rem;
-  text-align: center;
-  text-underline-position: from-font;
-  text-decoration-skip-ink: none;
-  width: 781px;
-  height: 105px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  margin: 1rem 0;
 }
 .register button {
   border-radius: 2rem;
@@ -94,8 +82,7 @@ header {
   font-size: 1.5rem;
 }
 .frame {
-  width: Hug (768px) px;
-  height: Hug (224px) px;
+  max-width: 100%;
   top: 631px;
   left: 434px;
   padding: 40px 60px 40px 60px;
@@ -103,12 +90,12 @@ header {
   border-radius: 24px 0px 0px 0px;
   border: 0.5px 0px 0px 0px;
 }
-.vector-image {
-  width: 1440px;
-  height: 93px;
+.vector-image img{
+  max-width: 100%;
   top: 931px;
   background-color: rgba(238, 241, 241, 0.301);
 }
+
 .activity-container {
   width: 100%;  
   padding: 60px 140px;
@@ -163,6 +150,7 @@ header {
   gap: 20px;
   padding-right: 15rem;
 }
+
 
 .why-scissors {
   flex: 1 1 50%;
@@ -221,15 +209,11 @@ header {
 }
 .pricing {
   text-align: center;
-  justify-content: center;
-  width: Hug (576.1px) px;
-  height: Hug (108px) px;
-  top: 42px;
-  left: 432px;
-  gap: 16px;
+  margin: 3rem 1rem;
 }
 .pricing h3 {
-  font-size: 3rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 .pricing h3 span {
   color: #005ae2;
@@ -245,23 +229,20 @@ header {
   padding: 2rem;
   margin: 3rem auto;
   background-color: white;
-  width: auto;
-  height: 75%;
-  top: 218px;
-  left: 176px;
-  gap: 0px;
+  max-width: 100%;
   border-radius: 12px 0px 0px 0px;
 }
 .basic,
 .professional,
 .teams {
-  flex: 1;
+  flex: 1 1 300px;
+  padding: 1.5rem;
   border-radius: 1.5rem;
-  padding: 2rem;
   background-color: white;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   text-align: center;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  min-height: 32rem;
 }
 
 .basic:hover,
@@ -426,6 +407,11 @@ header {
   background-color: aliceblue;
   color: rgb(67, 79, 241);
 }
+.custom button, .select button {
+  position: relative;
+  top: -12px; 
+}
+
 .dark-section {
   background: linear-gradient(180deg, #555, #1e3a8a, #000);
   width: 100%;
@@ -603,9 +589,10 @@ footer {
   align-items: flex-start;
   gap: 2rem;
   padding: 1.5rem 1rem;
-  margin-top: -2rem;
+  margin-top: 0;
   width: 100%;
   position: relative;
+  z-index: 1;
 }
 
 footer img {
@@ -662,96 +649,53 @@ footer img {
   cursor: pointer;
   transition: color 0.3s ease;
 }
-
-
-/*Responsiveness*/
-@media (max-width: 1024px) {
-  .header-section {
-    gap: 1rem;
-  }
-
-  .hero-section h1 {
-    font-size: 3.5rem;
-  }
-
-  .sub-paragraph {
-    font-size: 1.1rem;
-  }
-
-  .payment-plan {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  .basic,
-  .professional,
-  .teams {
-    width: 100%;
-  }
-
-  .footer-top,
-  .footer-bottom {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
+/* Media Queries */
 @media (max-width: 768px) {
   .header-section {
-    font-size: 1.2rem;
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
   }
 
   .hero-section h1 {
-    font-size: 2.5rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
 
   .sub-paragraph {
-    font-size: 1rem;
-  }
-
-  .footer-top,
-  .footer-bottom {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-section {
-    height: auto;
-  }
-
-  .activity-container {
-    flex-direction: column;
-    padding: 2rem;
-  }
-
-  .reason {
-    flex-direction: column;
-    padding: 2rem;
+    font-size: 0.9rem;
+    width: 90%;
+    margin: 0 auto;
   }
 
   .payment-plan {
     flex-direction: column;
+    gap: 2rem;
+  }
+
+  .basic, .professional, .teams {
+    flex: 1 1 auto;
   }
 }
 
 @media (max-width: 480px) {
   .header-section {
-    font-size: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
 
   .hero-section h1 {
-    font-size: 2rem;
-    text-align: center;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
   }
 
-  .sub-paragraph {
-    font-size: 0.9rem;
+  .pricing h3 {
+    font-size: 1.5rem;
   }
 
-  .footer-top,
-  .footer-bottom {
-    grid-template-columns: 1fr;
-  }
-
-  .payment-plan {
-    flex-direction: column;
+  .payment-title {
+    font-size: 1.2rem;
   }
 }
+
