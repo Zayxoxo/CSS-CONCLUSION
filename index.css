@@ -7,6 +7,9 @@ body{
   font-family: 'Arial', sans-serif; 
   background-color: #f4f4f4;
 }
+body, html{
+  overflow-x: hidden;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -90,8 +93,14 @@ header {
   border-radius: 24px 0px 0px 0px;
   border: 0.5px 0px 0px 0px;
 }
+.frame img{
+  max-width: 100%;
+  height: auto;
+}
+  
 .vector-image img{
   max-width: 100%;
+  height: auto;
   top: 931px;
   background-color: rgba(238, 241, 241, 0.301);
 }
@@ -649,6 +658,10 @@ footer img {
   cursor: pointer;
   transition: color 0.3s ease;
 }
+.container, .header-section, .hero-section, .footer {
+  max-width: 100%;
+  overflow: hidden; 
+}
 /* Media Queries */
 @media (max-width: 768px) {
   .header-section {
@@ -670,11 +683,14 @@ footer img {
 
   .payment-plan {
     flex-direction: column;
-    gap: 2rem;
   }
 
   .basic, .professional, .teams {
     flex: 1 1 auto;
+  }
+  .activity-container {
+    flex-direction: column; 
+    padding: 2rem;
   }
 }
 
@@ -697,5 +713,33 @@ footer img {
   .payment-title {
     font-size: 1.2rem;
   }
+.payment-plan,
+.footer-top {
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.payment-plan .basic,
+.payment-plan .professional,
+.payment-plan .teams {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+  gap: 1rem;
+}
+.hero-section img,
+.payment-plan img {
+  max-width: 100%;  /* Prevents images from overflowing their container */
+  height: auto;
+}
+
+
+  
+
 }
 
