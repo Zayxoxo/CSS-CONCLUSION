@@ -393,39 +393,48 @@ header {
   display: flex;
   gap: 5rem;
   justify-content: center;
+  flex-wrap: wrap; 
 }
+
 .custom .select {
   display: flex;
 }
-.custom button {
-  border: 3px solid #007bff;
-  color: #005ae2;
+
+.custom button, .select button {
   border-radius: 2rem;
-  width: 300px;
   height: 50px;
   font-size: 1.5rem;
   cursor: pointer;
   display: inline-block;
+  width: 300px; 
+  transition: all 0.3s ease;
+  margin-bottom: 10px; 
 }
+
+
+.custom button {
+  border: 3px solid #007bff;
+  color: #005ae2;
+}
+
 .custom button:hover {
   background-color: azure;
   color: rgb(182, 186, 238);
 }
+
+
 .select button {
   border: none;
   background-color: #005ae2;
   color: white;
-  border-radius: 2rem;
-  width: 300px;
-  height: 50px;
-  font-size: 1.5rem;
-  cursor: pointer;
-  display: inline-block;
 }
+
 .select button:hover {
   background-color: aliceblue;
   color: rgb(67, 79, 241);
 }
+
+
 .custom button, .select button {
   position: relative;
   top: -12px; 
@@ -701,6 +710,14 @@ footer img {
   .basic, .professional, .teams {
     flex: 1 1 auto;
   }
+  .purchase-button {
+    gap: 2rem; 
+  }
+  
+  .custom button, .select button {
+    width: 100%; 
+    font-size: 1.2rem;
+  }
   .activity-container {
     flex-direction: column; 
     padding: 2rem;
@@ -783,12 +800,21 @@ footer img {
   width: 100%;
   box-sizing: border-box;
 }
+.purchase-button {
+  gap: 1rem; 
+}
+  
+.custom button, .select button {
+  width: 100%;
+  font-size: 1rem; 
+  height: 45px;
+}
 .pricing {
   padding: 10px;
 }
 
-  .pricing-item {
-   width: 100%; 
+.pricing-item {
+  width: 100%; 
 }
 
 .footer-top {
